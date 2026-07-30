@@ -244,34 +244,51 @@
             </div>
         </div>
     </div>
-<div style="background: #000; border: 3px solid gold; border-radius: 15px; margin: 20px 10px; padding: 25px; text-align: center; color: white;">
-    <h3 style="color: gold; margin: 0; font-size: 20px;">🎁 БОНУСНИЙ ТУР</h3>
-    <h2 style="font-size: 36px; margin: 10px 0; font-weight: bold;">СКОРО!</h2>
-    <div id="bonus-timer" style="font-size: 26px; font-weight: bold; color: gold; border: 2px solid gold; display: inline-block; padding: 10px 25px; border-radius: 10px; margin: 15px 0; background: rgba(255,215,0,0.1);">
+<div style="background: #000; border: 3px solid gold; border-radius: 15px; margin: 20px 10px; padding: 15px; text-align: center; color: white;">
+    <h3 style="color: gold; margin-bottom: 15px; font-size: 22px;">🎁 БОНУСНИЙ ТУР</h3>
+    
+    <!-- Картинка афіші -->
+    <img src="1000017479.png" alt="Шпиці 05.08.2026" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto 15px auto;">
+    
+    <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">ДО ВИЇЗДУ ЗАЛИШИЛОСЯ:</div>
+    
+    <!-- Таймер -->
+    <div id="bonus-timer" style="font-size: 24px; font-weight: bold; color: gold; border: 2px solid gold; display: inline-block; padding: 10px 20px; border-radius: 10px; margin-bottom: 15px; background: rgba(255,215,0,0.1);">
         Завантаження...
     </div>
-    <p style="font-size: 15px; opacity: 0.9; margin-bottom: 20px;">Вгадай наступну вершину в Facebook та TikTok!</p>
-    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
-        <a href="https://www.tiktok.com/@volodymyr.bukalo" class="btn-main" style="background: #ff0050; color: white; border: none; padding: 10px 20px; font-size: 14px; text-decoration: none; border-radius: 25px;">TIKTOK 🎬</a>
-        <a href="https://www.facebook.com/share/1H3G5Qt1eu/" class="btn-main" style="background: #1877F2; color: white; border: none; padding: 10px 20px; font-size: 14px; text-decoration: none; border-radius: 25px;">FACEBOOK 👍</a>
+    
+    <p style="font-size: 15px; opacity: 0.9; margin-bottom: 20px;">Слідкуй за новинами в соцмережах!</p>
+    
+    <!-- Активні кнопки -->
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://www.tiktok.com/@volodymyr.bukalo" target="_blank" style="background: #ff0050; color: white; padding: 12px 24px; font-size: 14px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">TIKTOK 🎬</a>
+        <a href="https://www.facebook.com/share/1H3G5Qt1eu/" target="_blank" style="background: #1877F2; color: white; padding: 12px 24px; font-size: 14px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">FACEBOOK 👍</a>
     </div>
 </div>
+
 <script>
     function startBonusTimer() {
-        const target = new Date("Feb 14, 2026 09:00:00").getTime();
+        const target = new Date("Aug 5, 2026 09:00:00").getTime();
+        const timerElement = document.getElementById("bonus-timer");
+        if (!timerElement) return;
+        
         setInterval(function() {
             const now = new Date().getTime();
             const diff = target - now;
-            if (diff < 0) return;
+            if (diff < 0) {
+                timerElement.innerHTML = "ТУР РОЗПОЧАТО!";
+                return;
+            }
             const d = Math.floor(diff / (1000 * 60 * 60 * 24));
             const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const s = Math.floor((diff % (1000 * 60)) / 1000);
-            document.getElementById("bonus-timer").innerHTML = d + "д " + h + "г " + m + "хв " + s + "с";
+            timerElement.innerHTML = d + "д " + h + "г " + m + "хв " + s + "с";
         }, 1000);
     }
     startBonusTimer();
 </script>
+    
     
     
 

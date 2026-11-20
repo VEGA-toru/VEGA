@@ -224,6 +224,46 @@
         .contact-bar{padding:34px 5%;}
         .social-btns{gap:12px;}
     }
+
+    /* Shared VEGA-TUR styling, matched to the trekking page */
+    :root{
+        --night:#0f2027;
+        --steam:#f4f4f4;
+        --gold:#f39c12;
+        --teal:#2c5364;
+        --ink:#333333;
+        --card:#ffffff;
+    }
+    body{font-family:'Segoe UI',Roboto,sans-serif;background:var(--steam);color:var(--ink);}
+    h1,h2,h3{font-family:'Segoe UI',Roboto,sans-serif;}
+    header{background:rgba(15,32,39,.95);border-bottom:2px solid var(--gold);}
+    .logo{font-family:'Segoe UI',Roboto,sans-serif;font-size:1.8rem;}
+    .logo span{color:var(--gold);}
+    .back-link{color:#fff;border-color:rgba(255,255,255,.45);}
+    .back-link:hover{background:rgba(255,255,255,.12);}
+    .hero{background-color:var(--night);}
+    .hero h1{font-weight:800;letter-spacing:.01em;}
+    .btn-gold,.btn-main{background:var(--gold);color:#fff;border-radius:5px;}
+    .btn-gold:hover,.btn-main:hover{background:#e67e22;}
+    .intro{color:#333;}
+    .legend span{background:#fff;border-color:rgba(15,32,39,.15);}
+    .tour-card{background:#fff;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,.1);}
+    .tour-card:hover{transform:translateY(-10px);}
+    .tour-label.thermal{background:#2c5364;}
+    .tour-label.winter{background:#607d8b;}
+    .tour-label.history{background:#f39c12;}
+    .tour-stats{color:#666;}
+    .price{color:#0f2027;}
+    .contact-bar{background:#f39c12;color:#fff;}
+    .contact-bar p{color:#fff;}
+    footer{background:#f4f4f4;color:#666;}
+    #business-promo{background:#0f2027!important;color:#fff!important;}
+    #business-promo p{color:#e7edf0!important;}
+    @media(max-width:768px){
+        .logo{font-size:1.35rem;letter-spacing:1px;}
+        .tour-card:hover{transform:none;}
+    }
+
 </style>
 </head>
 <body>

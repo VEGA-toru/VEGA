@@ -71,7 +71,7 @@
         /* Секція переваг */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
             padding: 50px 5%;
             background: var(--primary);
             color: white;
@@ -86,7 +86,7 @@
         
         .tours-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
             gap: 30px;
             padding: 0 5% 60px;
         }
@@ -110,7 +110,7 @@
             padding: 5px 15px; font-weight: bold; border-radius: 20px;
         }
 
-        .tour-stats { display: flex; justify-content: space-between; margin: 15px 0; font-size: 0.9rem; color: #777; font-weight: bold; }
+        .tour-stats { display: flex; flex-wrap:wrap; gap:8px 12px; justify-content: space-between; margin: 15px 0; font-size: 0.9rem; color: #777; font-weight: bold; }
         .price { font-size: 1.5rem; color: var(--primary); font-weight: 800; }
 
         /* Контакти */
@@ -129,7 +129,17 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            header { padding:12px 4%; gap:10px; }
+            .logo { font-size:1.35rem; letter-spacing:1px; }
+            .hero { min-height:78svh; height:auto; padding:100px 20px 36px; }
+            .hero h1 { font-size:clamp(2rem,8vw,2.6rem); line-height:1.08; }
+            .hero p { font-size:1.08rem; line-height:1.5; }
+            .features { grid-template-columns:1fr; gap:14px; padding:28px 5%; }
+            .tours-grid { grid-template-columns:1fr; gap:18px; padding:0 4% 42px; }
+            .tour-content { padding:20px; }
+            .tour-stats { justify-content:flex-start; font-size:.86rem; }
+            .contact-bar { padding:32px 5%; }
+            .social-btns { flex-wrap:wrap; gap:12px; }
         }
     </style>
 </head>
@@ -267,55 +277,6 @@
     </div>
     </div>
     
-<div style="background: #000; border: 3px solid gold; border-radius: 15px; margin: 20px auto; padding: 20px; max-width: 650px; text-align: center; color: white; box-shadow: 0 4px 15px rgba(255,215,0,0.3);">
-    <h3 style="color: gold; margin-bottom: 15px; font-size: 26px; text-transform: uppercase; letter-spacing: 1px;">🎁 СПЕЦІАЛЬНИЙ ТУР</h3>
-    
-    <!-- Картинка афіші -->
-    <img src="Дизайн без назви_20260923_140501_0000.png" alt="" style="width: 100%; border-radius: 10px; display: block; margin: 0 auto 20px auto; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
-    
-    <div style="font-size: 20px; font-weight: bold; margin-bottom: 12px; letter-spacing: 0.5px;">:</div>
-    
-    <!-- Збільшений таймер -->
-    <div id="bonus-timer" style="font-size: 36px; font-weight: bold; color: gold; border: 3px solid gold; display: inline-block; padding: 15px 30px; border-radius: 12px; margin-bottom: 20px; background: rgba(255,215,0,0.15); letter-spacing: 2px; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-        00д 00г 00х 00с
-    </div>
-
-    <script>
-    (function() {
-        const deadline = new Date("2026-08-24T09:30:00").getTime();
-        const timerElement = document.getElementById("bonus-timer");
-        
-        setInterval(function() {
-            const now = new Date().getTime();
-            const diff = deadline - now;
-            
-            if (diff <= 0) {
-                timerElement.innerHTML = "НАБІР ГРУПИ РОЗПОЧАТО!";
-                return;
-            }
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            timerElement.innerHTML = `${days}д ${hours}г ${minutes}х ${seconds}с`;
-        }, 1000);
-    })();
-    </script>
-    
-    <p style="font-size: 16px; opacity: 0.9; margin-bottom: 20px;">Слідкуй за новинами в соцмережах!</p>
-    
-    <!-- Активні кнопки -->
-    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://www.tiktok.com/@volodymyr.bukalo" target="_blank" style="background: #ff0050; color: white; padding: 14px 28px; font-size: 15px; text-decoration: none; border-radius: 30px; font-weight: bold; display: inline-block;">TIKTOK 🎬</a>
-        <a href="https://www.facebook.com/share/1H3G5Qt1eu/" target="_blank" style="background: #1877F2; color: white; padding: 14px 28px; font-size: 15px; text-decoration: none; border-radius: 30px; font-weight: bold; display: inline-block;">FACEBOOK 👍</a>
-    </div>
-</div>
-    
-    
-    
-
 <section class="contact-bar">
     <h2>Дедальніша інформація онлайн, або по телефону. Готовий до своєї першої вершини?</h2>
     <p style="margin: 15px 0;">Бронювання місць у Viber або Telegram. Працюємо з групами та індивідуально.</p>

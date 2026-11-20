@@ -37,6 +37,18 @@
         .logo { color: var(--white); font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; }
         .logo span { color: var(--accent); }
 
+        .back-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.45);
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: .25s;
+            white-space: nowrap;
+        }
+        .back-link:hover { background: rgba(255,255,255,0.12); }
+
         /* Герой-секція */
         .hero {
             height: 100vh;
@@ -131,6 +143,7 @@
         @media (max-width: 768px) {
             header { padding:12px 4%; gap:10px; }
             .logo { font-size:1.35rem; letter-spacing:1px; }
+            .back-link { font-size:.8rem; padding:8px 10px; }
             .hero { min-height:78svh; height:auto; padding:100px 20px 36px; }
             .hero h1 { font-size:clamp(2rem,8vw,2.6rem); line-height:1.08; }
             .hero p { font-size:1.08rem; line-height:1.5; }
@@ -147,7 +160,7 @@
 
 <header>
     <div class="logo">VEGA<span>-ТУР</span></div>
-    <div style="color: white; font-weight: bold;">Трускавець 2026</div>
+    <a href="index.html" class="back-link">Автобусні маршрути</a>
 </header>
 <section style="background: #0f2027; color: white; padding: 30px 5%; text-align: center; border-bottom: 3px solid #f39c12; margin-top: 10px;">
     <img src="grok_image_1772154393174.jpg" alt="ГО КРОВ ЗА ЗЕМЛЮ" style="max-width: 150px; border-radius: 15px; border: 2px solid #f39c12; margin-bottom: 15px;">
@@ -164,7 +177,7 @@
     <h1>Тут починаються Карпати</h1>
     <p>Досить дивитися на гори з вікна автобуса. Ми ведемо вас на вершини, куди інші можуть тільки глянути.</p>
     <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-        <a href="#tours" class="btn-main">Обрати маршрут</a>
+        <a href="#shop" class="btn-main">Магазин туристичного спорядження</a>
         <a href="index.html" class="btn-main">Автобусні екскурсії</a>
     </div>
 </section>

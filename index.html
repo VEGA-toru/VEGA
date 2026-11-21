@@ -165,6 +165,15 @@
         background-color:#0b1f2a;
     }
     .tour-content{padding:25px;}
+    .tour-details{margin:18px 0 8px;border-top:1px solid rgba(15,32,39,.16);border-bottom:1px solid rgba(15,32,39,.16);}
+    .tour-details summary{cursor:pointer;list-style:none;padding:14px 0;font-weight:700;color:#0f2027;}
+    .tour-details summary::-webkit-details-marker{display:none;}
+    .tour-details summary::after{content:"＋";float:right;color:#f39c12;font-size:1.15rem;}
+    .tour-details[open] summary::after{content:"−";}
+    .tour-details-content{padding:0 0 16px;font-size:.94rem;line-height:1.55;}
+    .tour-details-content h4{margin:14px 0 8px;color:#0f2027;font-size:1rem;}
+    .tour-details-content ul{padding-left:20px;}
+    .tour-details-content li{margin:4px 0;}
     .tour-label{
         position:absolute;
         top:15px;
@@ -318,7 +327,33 @@
         <div class="tour-content">
             <h3>Круїз по Закарпаттю: Ужгород — Мукачеве</h3>
             <div class="tour-stats"><span>⏱️ 6:00–20:00</span><span>💰 1200 грн</span><span>📅 Неділя</span></div>
-            <p>Насичена подорож Закарпаттям із відвідуванням двох величних замків і прогулянками двома історичними центрами — Ужгорода та Мукачевого. Вирушаємо о 6:00, повертаємося до Трускавця близько 20:00. Деталі та бронювання — телефоном.</p>
+            <p>Насичена подорож Закарпаттям: Мукачево й Ужгород, два замки та історичні центри. Збір у Трускавці о 6:00, виїзд о 6:15, повернення близько 20:00.</p>
+            <details class="tour-details">
+                <summary>Програма та витрати</summary>
+                <div class="tour-details-content">
+                    <h4>Програма подорожі</h4>
+                    <ul>
+                        <li><strong>06:00</strong> — збір групи у Трускавці.</li>
+                        <li><strong>06:15</strong> — виїзд.</li>
+                        <li><strong>08:30</strong> — зупинка на сніданок.</li>
+                        <li><strong>09:30</strong> — безкоштовна дегустація вин.</li>
+                        <li><strong>10:00</strong> — пішохідна екскурсія Мукачевом.</li>
+                        <li><strong>10:30</strong> — вільний час на каву (30 хвилин).</li>
+                        <li><strong>11:30</strong> — екскурсія замком Паланок.</li>
+                        <li><strong>12:30</strong> — виїзд до Ужгорода.</li>
+                        <li><strong>13:30</strong> — екскурсія Ужгородським замком.</li>
+                        <li><strong>14:45</strong> — пішохідна екскурсія Ужгородом.</li>
+                        <li><strong>15:30</strong> — вільний час.</li>
+                        <li><strong>17:00</strong> — виїзд.</li>
+                        <li><strong>18:30</strong> — санітарна зупинка.</li>
+                        <li><strong>20:00</strong> — прибуття до Трускавця.</li>
+                    </ul>
+                    <h4>Додаткові витрати</h4>
+                    <p><strong>Замок Паланок:</strong> дорослі — 150 грн; пенсіонери та студенти — 100 грн; діти — 80 грн; УБД та сім’ї загиблих — безкоштовно. Екскурсійний супровід — 600 грн.</p>
+                    <p><strong>Ужгородський замок:</strong> дорослі — 200 грн; пенсіонери та студенти — 160 грн; діти — 130 грн; УБД та сім’ї загиблих — безкоштовно. Екскурсійний супровід — 800 грн.</p>
+                    <p><strong>Харчування оплачується самостійно.</strong></p>
+                </div>
+            </details>
             <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
                 <span class="price">1200 грн</span>
                 <a href="viber://chat?number=%2B380674296132" class="btn-main" style="padding:10px 20px;">Замовити</a>

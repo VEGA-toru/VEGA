@@ -280,7 +280,12 @@
     }
 
     picture{display:contents;}
-        .hero-copy{text-align:center;margin-inline:auto;}
+        .hero-copy{text-align:left;margin-inline:0;}
+    .hero h1{font-size:clamp(2.6rem,6.4vw,4.9rem);line-height:1.02;letter-spacing:.01em;}
+    @media (max-width:640px){
+        .hero h1{font-size:clamp(2.5rem,11.5vw,3.4rem);line-height:1.03;text-align:left;}
+        .hero-copy{padding-left:0;padding-right:0;}
+    }
     </style>
 <link rel="canonical" href="https://vega-tur.pp.ua/">
 <link rel="icon" href="/favicon.ico">
@@ -692,6 +697,14 @@
     <div class="social-btns">
         <a href="viber://chat?number=+380674296132" class="btn-gold">VIBER</a>
         <a href="https://t.me/gagarin2080" class="btn-gold">TELEGRAM</a>
+    </div>
+</section>
+
+<section class="contact-bar" id="business-promo" style="background:#f4ead9;color:#241b14;padding:42px 5%;text-align:center;">
+    <h2>Потрібен сайт або реклама для вашої справи?</h2>
+    <p style="color:#241b14;max-width:760px;margin:14px auto 22px;line-height:1.6;">Створюємо сайти та допомагаємо розповісти про вашу справу онлайн — в Instagram, TikTok, Facebook і YouTube. Напишіть нам, щоб обговорити рекламу, просування чи створення сайту.</p>
+    <div class="social-btns">
+        <a href="https://t.me/gagarin2080" class="btn-gold" target="_blank" rel="noopener noreferrer">Telegram</a>
     </div>
 </section>
 

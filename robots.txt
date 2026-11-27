@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Службові адреси, які не треба індексувати
+Disallow: /404.html
+
+Sitemap: https://vega-tur.pp.ua/sitemap.xml

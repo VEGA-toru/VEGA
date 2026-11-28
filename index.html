@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1112206997668752');
+fbq('track', 'PageView');
+
+(function () {
+  function tourName(a) {
+    var card = a.closest ? a.closest('.tour-card') : null;
+    var h = card ? card.querySelector('h3') : null;
+    return h ? h.textContent.trim().slice(0, 60) : 'site';
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a || typeof fbq !== 'function') return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') !== 0 && href.indexOf('viber:') !== 0 && href.indexOf('t.me') === -1) return;
+    fbq('track', 'Contact', { content_name: tourName(a) });
+  });
+  document.addEventListener('toggle', function (e) {
+    if (!e.target || e.target.tagName !== 'DETAILS' || !e.target.open) return;
+    if (typeof fbq !== 'function') return;
+    var card = e.target.closest ? e.target.closest('.tour-card') : null;
+    var h = card ? card.querySelector('h3') : null;
+    fbq('track', 'ViewContent', { content_name: h ? h.textContent.trim().slice(0, 60) : 'site' });
+  }, true);
+})();
+</script>
+<!-- End Meta Pixel Code -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2ZVCCCWDT"></script>
 <script>

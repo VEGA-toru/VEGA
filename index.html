@@ -310,10 +310,35 @@
         .hero h1{font-size:clamp(1.95rem,8.4vw,2.7rem);line-height:1.08;letter-spacing:.005em;text-wrap:balance;margin-bottom:10px;}
         .hero p{font-size:1rem;line-height:1.5;max-width:33ch;margin-bottom:0;color:rgba(255,255,255,.9);}
     }
-    </style>
+        /* HERO v2: photo as full-bleed background on every screen */
+    .hero{position:relative;display:flex;align-items:center;justify-content:flex-start;
+        min-height:min(90svh,880px);padding:120px 6% 70px;overflow:hidden;
+        background:#08161e;text-align:left;}
+    .hero picture{display:contents;}
+    .hero .hero-image{position:absolute;inset:0;z-index:0;width:100%;height:100%;max-width:none;
+        object-fit:cover;object-position:center 42%;opacity:1;filter:none;border-radius:0;}
+    .hero::before{content:"";position:absolute;inset:0;z-index:1;
+        background:linear-gradient(90deg,rgba(6,17,24,.94) 0%,rgba(6,17,24,.84) 32%,rgba(6,17,24,.46) 60%,rgba(6,17,24,.06) 100%);}
+    .hero-copy{position:relative;z-index:2;max-width:540px;margin:0;padding:0;background:none;text-align:left;}
+    .hero h1{font-size:clamp(2.5rem,4.9vw,4.6rem);line-height:1.03;letter-spacing:.005em;
+        text-wrap:balance;margin-bottom:16px;color:#fff;}
+    .hero p{font-size:clamp(1rem,1.3vw,1.18rem);line-height:1.5;max-width:44ch;
+        margin-bottom:26px;color:rgba(255,255,255,.9);}
+    .hero-actions{display:flex;gap:12px;justify-content:flex-start;flex-wrap:wrap;}
+    .hero-actions .btn-gold{min-width:170px;text-align:center;}
+    @media (max-width:900px){
+        .hero{min-height:100svh;align-items:flex-end;padding:92px 20px 30px;text-align:left;}
+        .hero::before{background:linear-gradient(180deg,rgba(6,17,24,.10) 0%,rgba(6,17,24,.42) 46%,rgba(6,17,24,.96) 100%);}
+        .hero .hero-image{object-position:center 28%;}
+        .hero-copy{max-width:none;width:100%;padding:0;}
+        .hero h1{font-size:clamp(2rem,8.8vw,2.95rem);line-height:1.07;}
+        .hero p{font-size:1rem;line-height:1.5;max-width:34ch;margin-bottom:18px;}
+    }
+</style>
 <link rel="canonical" href="https://vega-tur.pp.ua/">
 <link rel="icon" href="/favicon.ico">
-<link rel="preload" as="image" href="img/bus-hero-720.webp" imagesrcset="img/bus-hero-480.webp 480w, img/bus-hero-720.webp 720w, img/bus-hero-941.webp 941w" imagesizes="(max-width:900px) 100vw, 480px" type="image/webp">
+<link rel="preload" as="image" href="img/hero-desk-1920.webp" imagesrcset="img/hero-desk-1200.webp 1200w, img/hero-desk-1920.webp 1920w" imagesizes="100vw" media="(min-width:901px)" type="image/webp">
+<link rel="preload" as="image" href="img/bus-hero-720.webp" imagesrcset="img/bus-hero-480.webp 480w, img/bus-hero-720.webp 720w, img/bus-hero-941.webp 941w" imagesizes="100vw" media="(max-width:900px)" type="image/webp">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VEGA-ТУР Трускавець">
 <meta property="og:locale" content="uk_UA">
@@ -334,10 +359,13 @@
 </header>
 
 <section class="hero">
-    <picture><source type="image/webp" srcset="img/bus-hero-480.webp 480w, img/bus-hero-720.webp 720w, img/bus-hero-941.webp 941w" sizes="(max-width:900px) 100vw, 480px"><img class="hero-image" src="img/bus-hero-720.jpg" alt="Лижниця VEGA-ТУР серед засніжених Карпат" fetchpriority="high" decoding="async"></picture>
+    <picture><source media="(min-width:901px)" type="image/webp" srcset="img/hero-desk-1200.webp 1200w, img/hero-desk-1920.webp 1920w" sizes="100vw"><source type="image/webp" srcset="img/bus-hero-480.webp 480w, img/bus-hero-720.webp 720w, img/bus-hero-941.webp 941w" sizes="100vw"><img class="hero-image" src="img/bus-hero-720.jpg" alt="Лижниця VEGA-ТУР серед засніжених Карпат" fetchpriority="high" decoding="async"></picture>
     <div class="hero-copy">
         <h1>СВЯТКУЙ з VEGA-ТУР!</h1>
         <p>Лижі, термальні води, замки й зимові міста. Обирай автобусну подорож і бронюй місце з Трускавця.</p>
+        <div class="hero-actions">
+            <a class="btn-gold" href="about.html">Про нас</a>
+        </div>
     </div>
 </section>
 

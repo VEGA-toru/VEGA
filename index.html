@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2ZVCCCWDT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z2ZVCCCWDT');
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a || typeof gtag !== 'function') return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') !== 0 && href.indexOf('viber:') !== 0 && href.indexOf('t.me') === -1) return;
+    var card = a.closest('.tour-card');
+    var h = card ? card.querySelector('h3') : null;
+    gtag('event', 'contact_click', {
+      contact_type: href.indexOf('tel:') === 0 ? 'phone' : (href.indexOf('viber:') === 0 ? 'viber' : 'telegram'),
+      tour: h ? h.textContent.trim().slice(0, 60) : '',
+      page: location.pathname,
+      link_text: (a.textContent || '').trim().slice(0, 40)
+    });
+  });
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Автобусні екскурсії з Трускавця — Косино, замки, Карпати | VEGA-ТУР</title>

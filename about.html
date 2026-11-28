@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Про нас — VEGA-ТУР, екскурсії та походи з Трускавця</title>
-<meta name="description" content="VEGA-ТУР — автобусні екскурсії та піші походи Карпатами з Трускавця. Гіди-провідники з досвідом 25+ років, малі групи, прозорі ціни.">
+<title>Про нас — Володимир Букало, VEGA-ТУР Трускавець</title>
+<meta name="description" content="Історія VEGA-ТУР: Володимир Букало, туризм з 2002 року, авторські трекінги Карпатами. Забираємо з Трускавця, Дрогобича, Стрия, Борислава, Східниці.">
 <link rel="canonical" href="https://vega-tur.pp.ua/about.html">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
@@ -12,8 +12,8 @@
 <meta property="og:locale" content="uk_UA">
 <meta property="og:url" content="https://vega-tur.pp.ua/about.html">
 <meta property="og:title" content="Про нас — VEGA-ТУР, Трускавець">
-<meta property="og:description" content="Автобусні екскурсії та піші походи Карпатами. Гіди з досвідом 25+ років, виїзд з Трускавця.">
-<meta property="og:image" content="https://vega-tur.pp.ua/og-cover.jpg">
+<meta property="og:description" content="Володимир Букало — засновник VEGA-ТУР. Туризм з 2002 року, авторські маршрути Карпатами, підтримка ЗСУ.">
+<meta property="og:image" content="https://vega-tur.pp.ua/img/about-founder-900.webp">
 <meta name="twitter:card" content="summary_large_image">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2ZVCCCWDT"></script>
@@ -24,75 +24,266 @@
   gtag('config', 'G-Z2ZVCCCWDT');
 </script>
 <style>
-  :root{--bg:#0b1f2a;--card:#122a37;--gold:#e8b64c;--text:#f2ede4;--muted:#9fb0ba;}
+  :root{
+    --night:#08161e; --night-2:#0d2430; --card:#102b38; --line:rgba(232,182,76,.22);
+    --gold:#e8b64c; --gold-2:#f5cd7a; --text:#f4efe6; --muted:#a9bcc7;
+  }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--text);font-family:"Work Sans",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;}
-  header{display:flex;align-items:center;justify-content:space-between;padding:18px 6%;border-bottom:2px solid var(--gold);}
-  .logo{font-size:1.5rem;font-weight:800;letter-spacing:2px;}
-  .logo span{color:var(--gold);}
-  .back{color:var(--text);text-decoration:none;border:1px solid rgba(255,255,255,.35);padding:8px 16px;border-radius:30px;font-size:.95rem;}
-  .back:hover{background:rgba(255,255,255,.08);}
-  main{max-width:880px;margin:0 auto;padding:56px 6% 72px;}
-  h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin-bottom:18px;}
-  .lead{font-size:clamp(1rem,1.4vw,1.15rem);color:var(--muted);margin-bottom:34px;max-width:60ch;}
-  h2{font-size:1.25rem;margin:36px 0 12px;color:var(--gold);}
-  p{margin-bottom:14px;color:#e6ecef;}
-  ul{margin:0 0 14px 20px;}
-  li{margin-bottom:8px;color:#e6ecef;}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin:26px 0 8px;}
-  .card{background:var(--card);border:1px solid rgba(232,182,76,.18);border-radius:14px;padding:20px;}
-  .card b{color:var(--gold);display:block;margin-bottom:6px;}
-  .cta{margin-top:42px;background:var(--card);border-radius:16px;padding:28px;text-align:center;border:1px solid rgba(232,182,76,.22);}
-  .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px;}
-  .btn{display:inline-block;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.98rem;}
-  .primary{background:var(--gold);color:#12100e;}
-  .ghost{border:1px solid rgba(232,182,76,.5);color:var(--gold);}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(232,182,76,.10), transparent 60%),
+      radial-gradient(900px 500px at 0% 20%, rgba(46,110,140,.22), transparent 60%),
+      var(--night);
+    color:var(--text);
+    font-family:"Work Sans",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-weight:700;line-height:1.12;letter-spacing:.01em;}
   a{color:var(--gold);}
-  footer{text-align:center;padding:26px 6% 40px;color:var(--muted);font-size:.9rem;}
+  img{display:block;max-width:100%;height:auto;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+    background:rgba(8,22,30,.78);border-bottom:1px solid rgba(232,182,76,.25);}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1080px;margin:0 auto;}
+  .logo{font-weight:800;letter-spacing:2px;font-size:1.25rem;}
+  .logo span{color:var(--gold);}
+  .back{font-size:.92rem;text-decoration:none;color:var(--text);border:1px solid rgba(255,255,255,.28);
+    padding:8px 16px;border-radius:999px;transition:.2s;}
+  .back:hover{background:rgba(255,255,255,.08);border-color:var(--gold);}
+
+  /* ---------- hero ---------- */
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:64px 0 56px;}
+  .eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);border:1px solid var(--line);padding:7px 14px;border-radius:999px;margin-bottom:20px;}
+  h1{font-size:clamp(2rem,4.4vw,3.3rem);margin-bottom:18px;text-wrap:balance;}
+  .lead{font-size:clamp(1rem,1.5vw,1.2rem);color:#dfe8ec;max-width:52ch;}
+  .hero-note{margin-top:22px;font-size:.95rem;color:var(--muted);}
+  .portrait{position:relative;}
+  .portrait img{border-radius:22px;border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 30px 60px rgba(0,0,0,.5);width:100%;object-fit:cover;}
+  .badge{position:absolute;bottom:-26px;left:-26px;width:118px;height:118px;border-radius:26px;
+    background:#fff;padding:10px;box-shadow:0 18px 34px rgba(0,0,0,.45);}
+  .badge img{width:100%;height:100%;object-fit:contain;border-radius:18px;}
+
+  /* ---------- generic section ---------- */
+  section.blk{padding:56px 0;border-top:1px solid rgba(255,255,255,.07);}
+  .kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+  h2{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-bottom:22px;}
+
+  /* ---------- timeline ---------- */
+  .tl{position:relative;margin-left:8px;padding-left:28px;border-left:1px solid rgba(232,182,76,.35);}
+  .tl-item{position:relative;padding-bottom:28px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:"";position:absolute;left:-35px;top:7px;width:13px;height:13px;border-radius:50%;
+    background:var(--gold);box-shadow:0 0 0 5px rgba(232,182,76,.15);}
+  .tl-year{font-family:"Fraunces",Georgia,serif;font-size:1.05rem;color:var(--gold-2);letter-spacing:.06em;}
+  .tl-t{font-weight:600;margin:2px 0 4px;}
+  .tl-d{color:var(--muted);font-size:.96rem;max-width:62ch;}
+
+  /* ---------- quote ---------- */
+  .quote{background:linear-gradient(135deg,rgba(232,182,76,.10),rgba(46,110,140,.10));
+    border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:18px;padding:30px 28px;}
+  .quote p{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.1rem,2vw,1.45rem);line-height:1.45;color:#fff;}
+  .quote span{display:block;margin-top:14px;color:var(--gold);font-size:.9rem;letter-spacing:.04em;font-family:inherit;}
+
+  /* ---------- cards ---------- */
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));}
+  .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px;
+    transition:transform .2s,border-color .2s;}
+  .card:hover{transform:translateY(-3px);border-color:var(--line);}
+  .card h3{font-size:1.12rem;margin-bottom:8px;color:#fff;}
+  .card p{color:var(--muted);font-size:.96rem;}
+  .card .ico{font-size:1.5rem;margin-bottom:10px;}
+
+  /* ---------- pickup ---------- */
+  .cities{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 14px;}
+  .city{border:1px solid var(--line);background:rgba(232,182,76,.07);color:var(--gold-2);
+    padding:9px 18px;border-radius:999px;font-size:.95rem;}
+  .city.primary{background:var(--gold);color:#1a1206;border-color:var(--gold);font-weight:600;}
+  .hint{color:var(--muted);font-size:.93rem;}
+
+  /* ---------- booking ---------- */
+  .booking{background:linear-gradient(135deg,rgba(232,182,76,.16),rgba(232,182,76,.04));
+    border:1px solid var(--line);border-radius:24px;padding:38px 30px;text-align:center;}
+  .booking h2{margin-bottom:10px;}
+  .booking p{color:#e8eef1;max-width:56ch;margin:0 auto 24px;}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:12px;
+    text-decoration:none;font-weight:600;font-size:1rem;transition:transform .15s,opacity .15s;}
+  .btn:hover{transform:translateY(-2px);opacity:.95;}
+  .btn.gold{background:var(--gold);color:#1a1206;}
+  .btn.ghost{border:1px solid rgba(232,182,76,.55);color:var(--gold);}
+  .booking .small{margin-top:18px;font-size:.86rem;color:var(--muted);}
+
+  footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0 40px;color:var(--muted);font-size:.9rem;text-align:center;}
+
+  @media (max-width:820px){
+    .hero{grid-template-columns:1fr;gap:28px;padding:36px 0 40px;}
+    .portrait{order:-1;}
+    .badge{width:92px;height:92px;left:-14px;bottom:-18px;border-radius:22px;}
+    section.blk{padding:40px 0;}
+    .booking{padding:28px 20px;border-radius:20px;}
+    .btn{width:100%;justify-content:center;}
+  }
 </style>
 </head>
 <body>
+
 <header>
-  <div class="logo">VEGA<span>-ТУР</span></div>
-  <a class="back" href="index.html">← На головну</a>
+  <div class="bar">
+    <div class="logo">VEGA<span>-ТУР</span></div>
+    <a class="back" href="index.html">← На головну</a>
+  </div>
 </header>
 
-<main>
-  <h1>Про нас</h1>
-  <p class="lead">VEGA-ТУР — це автобусні екскурсії та піші походи Карпатами з Трускавця. Ми водимо людей туди, куди самостійно доїхати складно, а без провідника — ризиковано.</p>
+<main class="wrap">
 
-  <h2>Що ми робимо</h2>
-  <p>Два напрямки, які доповнюють один одного:</p>
-  <ul>
-    <li><b>Автобусні екскурсії</b> — одноденні подорожі Закарпаттям, Львівщиною та Карпатами: термальні води, замки, історичні міста. Виїзд з Трускавця, програма розписана по годинах.</li>
-    <li><b>Піші походи</b> — авторські маршрути на Говерлу, Шпиці, Боржаву, Синевир, Парашку, Ключ. Є легкі виходи на пів дня для тих, кому важкі вершини не підходять.</li>
-  </ul>
-
-  <div class="cards">
-    <div class="card"><b>25+ років досвіду</b>Наші гіди-провідники водять групи Карпатами не перший десяток років.</div>
-    <div class="card"><b>Малі групи</b>Працюємо і з групами, і індивідуально — без натовпу й поспіху.</div>
-    <div class="card"><b>Прозорі ціни</b>Вартість туру й додаткові витрати (квитки, входи, харчування) вказані окремо.</div>
-  </div>
-
-  <h2>Підтримка ЗСУ</h2>
-  <p>10% з кожного квитка ми передаємо на допомогу українським захисникам через ГО «КРОВ ЗА ЗЕМЛЮ». Звіти про кошти публікуються в Telegram.</p>
-
-  <h2>Контакти</h2>
-  <p>Телефони: <a href="tel:+380674296132">+380 67 429 61 32</a>, <a href="tel:+380502278002">+380 50 227 80 02</a><br>
-  Місто: Трускавець, Львівська область<br>
-  Бронювання: телефоном, у Viber або Telegram.</p>
-
-  <div class="cta">
-    <h2 style="margin-top:0">Готові обрати маршрут?</h2>
-    <p>Подивіться найближчі виїзди — і забронюйте місце.</p>
-    <div class="btns">
-      <a class="btn primary" href="index.html#routes">Автобусні екскурсії</a>
-      <a class="btn ghost" href="trekking.html">Піші походи</a>
-      <a class="btn ghost" href="tel:+380674296132">Подзвонити</a>
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Трускавець · з 2002 року в туризмі</span>
+      <h1>Володимир Букало — людина, яка знає Карпати зсередини</h1>
+      <p class="lead">Засновник «VEGA-ТУР». Пройшов шлях від екскурсовода до організатора гірських сходжень і багатоденних мандрівок. Кожен маршрут — його власний, випробуваний на собі.</p>
+      <p class="hero-note">Туризм з 2002-го · агенція «Юрген» з 2005-го · ветеран ЗСУ · засновник ГО «Кров за Землю»</p>
     </div>
-  </div>
+    <div class="portrait">
+      <picture>
+        <source type="image/webp" srcset="img/about-founder-600.webp 600w, img/about-founder-900.webp 900w" sizes="(max-width:820px) 90vw, 420px">
+        <img src="img/about-founder-900.webp" alt="Володимир Букало, засновник VEGA-ТУР, на вершині в Карпатах" width="900" height="1125" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="badge"><img src="img/about-emblem-512.webp" alt="Емблема VEGA-ТУР" width="512" height="512" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="kicker">Історія</div>
+    <h2>Як це починалося</h2>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-year">2002</div>
+        <div class="tl-t">Перші кроки в туризмі</div>
+        <div class="tl-d">Початок шляху — екскурсії Трускавцем і околицями. Звідси — знання кожної стежки й кожної історії курорту.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2005</div>
+        <div class="tl-t">Агенція «Юрген»: від екскурсовода до організатора</div>
+        <div class="tl-d">Робота в туристичній агенції «Юрген», де за роки пройдено шлях від екскурсовода до організатора гірських сходжень і багатоденних мандрівок Карпатами.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2017</div>
+        <div class="tl-t">Пауза</div>
+        <div class="tl-d">Життєві обставини змусили відкласти туристичну справу — робота в Чеській Республіці.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2022</div>
+        <div class="tl-t">Повернення додому і служба</div>
+        <div class="tl-d">З початком повномасштабної війни Володимир повернувся в Україну й став на захист Батьківщини. Три з половиною роки — на фронті.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">Сьогодні</div>
+        <div class="tl-t">«VEGA-ТУР»</div>
+        <div class="tl-d">Почали з авторських трекінгових маршрутів. Тепер кожен тур — літнє сходження чи зимова програма — має свою родзинку, якої не знайдете в шаблонних екскурсіях.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="quote">
+      <p>«Я свідомо відійшов від шаблонних екскурсій, які пропонують інші, щоб подарувати гостям Трускавця справжні, живі Карпати та особливу атмосферу».</p>
+      <span>Володимир Букало, засновник VEGA-ТУР</span>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="kicker">Більше ніж туризм</div>
+    <h2>Волонтерство та творчість</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="ico">🩸</div>
+        <h3>ГО «Кров за Землю»</h3>
+        <p>Як ветеран, Володимир заснував і очолює громадську організацію, яка збирає кошти та допомагає захисникам із ЗСУ. 10% з кожного квитка йде на цю справу.</p>
+        <p style="margin-top:12px"><a href="https://t.me/krov_za_zemlyu" target="_blank" rel="noopener noreferrer">Звіти про кошти в Telegram →</a></p>
+      </div>
+      <div class="card">
+        <div class="ico">🎵</div>
+        <h3>Вірші та пісні</h3>
+        <p>Про життя, гори, родину та війну. Вірші, які згодом стають піснями — послухати можна на авторському YouTube-каналі.</p>
+        <p style="margin-top:12px"><a href="https://www.youtube.com/@VEGA-DJ-UKR" target="_blank" rel="noopener noreferrer">Слухати на YouTube →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="kicker">Сервіс</div>
+    <h2>Вам не треба нікуди йти</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="ico">☎️</div>
+        <h3>Замовлення по телефону</h3>
+        <p>Обрати та забронювати екскурсію можна просто за дзвінком — без черг, офісів і форм.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🚶</div>
+        <h3>Квиток принесуть вам</h3>
+        <p>За домовленістю представник підійде прямо до вашого санаторію, готелю чи пансіонату: передасть квиток і розповість, де та о котрій годині посадка.</p>
+      </div>
+      <div class="card">
+        <div class="ico">💳</div>
+        <h3>Зручна оплата</h3>
+        <p>Готівкою представнику, за офіційними реквізитами IBAN або при посадці в мікроавтобус. Працюємо офіційно — ФОП Букало Володимир Олександрович.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="kicker">Логістика</div>
+    <h2>Звідки ми вас забираємо</h2>
+    <p class="hint">Основний виїзд — з Трускавця. Дорогою можемо підібрати туристів з інших міст, залежно від того, куди прямує маршрут:</p>
+    <div class="cities">
+      <span class="city primary">Трускавець</span>
+      <span class="city">Дрогобич</span>
+      <span class="city">Стрий</span>
+      <span class="city">Борислав</span>
+      <span class="city">Східниця</span>
+    </div>
+    <p class="hint">Точне місце й час посадки узгоджуємо телефоном при бронюванні.</p>
+  </section>
+
+  <section class="blk">
+    <div class="grid">
+      <div class="card">
+        <div class="ico">👥</div>
+        <h3>Організовані групи</h3>
+        <p>Проводимо тури для груп: колективи, родини, компанії друзів. Програму й час підлаштовуємо під вас.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🧭</div>
+        <h3>Індивідуально</h3>
+        <p>Хочете маршрут тільки для себе — домовляйтеся, і ми зробимо персональну програму під ваш темп і побажання.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="booking">
+      <div class="kicker">Бронювання</div>
+      <h2>Замовити квиток</h2>
+      <p>Один дзвінок — і місце ваше. Ми підтвердимо дату, назвемо місце посадки та відповімо на всі питання. Квиток передамо особисто.</p>
+      <div class="btns">
+        <a class="btn gold" href="tel:+380674296132">📞 +380 67 429 61 32</a>
+        <a class="btn ghost" href="viber://chat?number=%2B380674296132">Viber</a>
+        <a class="btn ghost" href="https://t.me/gagarin2080">Telegram</a>
+      </div>
+      <p class="small">Другий номер: <a href="tel:+380502278002">+380 50 227 80 02</a> · Працюємо щодня</p>
+    </div>
+  </section>
+
 </main>
 
-<footer>© 2026 VEGA-ТУР Трускавець. Тел. +380674296132, +380502278002</footer>
+<footer>
+  <div class="wrap">© 2026 VEGA-ТУР Трускавець · ФОП Букало В. О. · <a href="tel:+380674296132">+380 67 429 61 32</a></div>
+</footer>
+
 </body>
 </html>
